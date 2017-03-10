@@ -3,30 +3,33 @@ import datetime as dt, time as tm
 
 def split_request(request):
 	r = request['request'].split()
+	endpoint = r[1]
+	m = re.compile(r'\/.+\.html')
+	endpoint = m.match(endpoint)
 	return {
 		'request': r[0],
-		'endpoint': r[1],
-		'protocol': r[2] 
+		'endpoint': endpoint.group(0),
+		'protocol': r[2]
 		}
 
 def get_status(request):
 	return request['status']
 
 def convert_mylist(lines):
-	### 
-	# boss, bellow parts are for Nginx log. 
-	# I don't have Apache here 
+	###
+	# boss, bellow parts are for Nginx log.
+	# I don't have Apache here
 	# So if is not working you should rebuild it.
 	# Sorry, But you are "tatic" in regex :)
 	# Note that: r is from raw, ?P it is an identifier
 	# propper to python because py can load perl and vice-versa
 
 	parts = [
-	    r'\S+',                   # host %h
+	    r'\S+',                   			# host %h
 	    r'\S+',                             # indent %l (unused)
 	    r'\S+',			                    # user %u
 	    r'\[(?P<datetime>.+)\]',            # time %t
-	    r'"(?P<request>.+)"',               # request "%r"
+	    r'"(?P<request>.+)"',       		# request "%r"
 	    r'(?P<status>[0-9]+)',              # status %>s
 	    r'\S+',                   			# size %b (careful, can be '-')
 	    r'".*"',               				# referer "%{Referer}i"
@@ -47,26 +50,36 @@ def convert_mylist(lines):
 			mylist.append(m.groupdict())
 	return mylist
 
- 	
 ## param: datetime - log string datetime
 ## retrun datetime object ex: 2017-02-22 18:45
 def datetime_convert(request):
-	r = request['datetime'][:-6]
-	return dt.datetime.strptime(r, '%d/%b/%Y:%I:%M:%S')
+	r = request['datetime'][:-9]
+	return dt.datetime.strptime(r, '%d/%b/%Y:%H:%M')
 
 ## param: datetime - converted datetime
 ## retrun string ex: 2017-02-22T18:45
 def datetime_encode(datetime):
 	return str(datetime).replace(" ", "T")[:-3]
-	
+
 ## param: string ex: 2017-02-22T18:45
 ## retrun datetime object ex: 2017-02-22 18:45
 def datetime_decode(datetime):
-	datetime = datetime.replace("T", " ") 
-	return dt.datetime.strptime(datetime, '%Y-%m-%d %I:%M')
+	datetime = datetime.replace("T", " ")
+	return dt.datetime.strptime(datetime, '%Y-%m-%d %H:%M')
 
 
 def filter_by_date(mylist, start, end):
+	mylist = sorted(mylist, key=lambda x: (datetime_convert(x))) # sort by date
+
+	start = datetime_decode(
+				datetime_convert(mylist[0]['datetime']) \
+				if start == None else start
+			)
+	end = datetime_decode(
+				datetime_convert(mylist[len(mylist)-1]['datetime']) \
+					if end == None else end
+				)
+
 	newlist = list()
 	def filter_my_data(x):
 		if datetime_convert(x) > datetime_decode(start) \
