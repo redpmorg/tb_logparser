@@ -14,22 +14,26 @@ _end = None
 _success_filter = None
 
 # inputfile = open(os.path.join('./data/tests', value), 'r')
-if len(list(sys.argv)) > 2:
-	sys.argv.pop(0) #pop out the name of application file
-	sys.argv.pop(0) #pop out the name of log test file
-	args_tuple = zip(sys.argv[::2], sys.argv[1::2])
-	for arg, value in args_tuple:
-		if arg == "--interval":
-			_interval = int(value)
-		elif arg == "--start":
-			_start = value
-			#do something
-		elif arg == "--end":
-			_end = value
-			#do something else
-		elif arg == "--success":
-			_success_filter = value
-			#do somethign else
+# if len(list(sys.argv)) > 2:
+	# sys.argv.pop(0) #pop out the name of application file
+	# sys.argv.pop(0) #pop out the name of log test file
+args_tuple = zip(sys.argv[::2], sys.argv[1::2])
+for arg, value in args_tuple:
+	if arg == "--interval":
+		_interval = int(value)
+	elif arg == "--start":
+		_start = value
+		#do something
+	elif arg == "--end":
+		_end = value
+		#do something else
+	elif arg == "--success":
+		_success_filter = value
+		#do somethign else
+
+del sys.argv[2:]
+lines = fileinput.input()
+
 parts = [
     r'\S+',                   							# host %h
     r'\S+',                             				# indent %l (unused)
@@ -42,42 +46,13 @@ parts = [
     r'".*"',                 							# user agent "%{User-agent}i"
 ]
 pattern = re.compile(r'\s+'.join(parts) + r'\s*\Z')
-
-#let's make our input list
 mylist = list()
-
-print (sys.argv)
-lines = fileinput.input()
 for line in lines:
 	m = pattern.match(line)
 	if m:
 		mylist.append(m.groupdict())
 
-
-# the main function for the script, called by the shell
-# if __name__ == "__main__":
-# 	sys.argv.pop(0) #pop out the name of application file
-# 	args_tuple = zip(sys.argv[::2], sys.argv[1::2])
-# 	if len(list(sys.argv)) > 0:
-# 		for arg, value in args_tuple:
-# 			if arg == "--interval":
-# 				_interval = int(value)
-# 			elif arg == "--start":
-# 				_start = value
-# 				#do something
-# 			elif arg == "--end":
-# 				_end = value
-# 				#do something else
-# 			elif arg == "--success":
-# 				_success_filter = value
-# 				#do somethign else
-# 	else:
-# 		sys.tracebacklimit = 0
-# 		print ("\n\n")
-# 		raise ValueError("\n\n Gimme some arguments, pls!")
-
 newlist = U.filter_by_date(mylist, _start, _end, _interval)
-
 # newlist_len = len(newlist)
 
 import itertools

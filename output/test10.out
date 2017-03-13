@@ -1,1 +1,0 @@
-['--interval', '30', '--success', '20x,3xx,404']
