@@ -5,7 +5,7 @@ __license__ = "None"
 import sys, os
 import utils as U
 
-inputfile = open(os.path.join('./data/tests', 'test0.log'), 'r')
+inputfile = open(os.path.join('./data/tests', 'test1.log'), 'r')
 lines = inputfile.readlines()  #this is list type
 _interval = 1
 _start = None
@@ -51,21 +51,14 @@ for k, v in itertools.groupby(newlist, key=itemgetter('datetime')):
 	v = sorted(v, key=itemgetter('request'))
 	for i, vv in itertools.groupby(v, key=itemgetter('request')):
 		# tc = len(list(v))
-		success_tc = sum(Counter(d['status'] \
-			for d in list(v) if d['status'][0] == '2').values())
+		tv = list(vv).copy()
+		tvv = list(tv).copy()
 		success_c = sum(Counter(d['status'] \
-			for d in list(vv) if d['status'][0] == '2').values())
-		print (k, i,  "%.2f" % float(success_c/success_tc*100))
+			for d in list(tv) if d['status'][0] == '2').values())
+		success_tc = len(list(tvv))
 
+		print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
 		
-
-# c = Counter(itemgetter('request')(vl))
-	# for i in v:
-		# print (i.get('request'))
-
-# print (groups)
-# print (uniquekey)
-# print (newlist)
 
 
 # outputfile = open('my_log.log', 'w')
