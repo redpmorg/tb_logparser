@@ -1,5 +1,4 @@
-import re   #regular expresion
-import datetime as dt, time as tm
+import datetime as dt, time as tm, re
 
 def split_request(request):
 	r = request['request'].split()
@@ -15,34 +14,12 @@ def split_request(request):
 def get_status(request):
 	return request['status']
 
-def convert_mylist(lines):
-	parts = [
-	    r'\S+',                   							# host %h
-	    r'\S+',                             				# indent %l (unused)
-	    r'\S+',			                   				 	# user %u
-	    r'\[(?P<datetime>.+):[0-9]{2}\s\+[0-9]{4}\]',    	# time %t
-	    r'"(?P<request>.+)"',       						# request "%r"
-	    r'(?P<status>[0-9]+)',              				# status %>s
-	    r'\S+',                   							# size %b (careful, can be '-')
-	    r'".*"',               								# referer "%{Referer}i"
-	    r'".*"',                 							# user agent "%{User-agent}i"
-	]
-	pattern = re.compile(r'\s+'.join(parts) + r'\s*\Z')
-
-	#let's make our input list
-	mylist = list()
-	for line in lines:
-		m = pattern.match(line)
-		if m:
-			mylist.append(m.groupdict())
-	return mylist
-
 ## param: datetime - log string datetime
 ## retrun datetime object ex: 2017-02-22 18:45:00
 def datetime_convert(request):
 	r = request if type(request) == str else request['datetime']
 	r = dt.datetime.strptime(r, '%d/%b/%Y:%H:%M')
-	return r 
+	return r
 
 ## param: datetime - converted datetime
 ## retrun string ex: 2017-02-22T18:45
@@ -63,7 +40,7 @@ def datetime_decode(dtime):
 def filter_by_date(mylist, start, end, interval):
 	mylist = sorted(mylist, key=lambda x: (datetime_convert(x), x['request'])) # sort by date
 	start = datetime_decode(
-				datetime_convert(mylist[0]['datetime']) 
+				datetime_convert(mylist[0]['datetime'])
 				if start == None else start
 			)
 	end = datetime_decode(
