@@ -75,15 +75,19 @@ for k, v in itertools.groupby(newlist, key=_k):
 			for d in list(tv) if d['status'][0] == '2').values())
 		success_tc = len(list(tvv))
 
+		# this will pass tests from 0 to 3 -> 40%
 		# print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
-
-		# ddiff = U.datetime_decode(semn) - (U.datetime_decode(vv['datetime']) + _interval):
 
 		result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
 
 # print (result_list)
 
+dic = []
+for k, g in itertools.groupby(result_list, key=itemgetter('datetime')):
+    dic.append([i for i in map(itemgetter('datetime', 'request', 'success', 'total'), g)])
 
+for k in itertools.chain(dic):
+	print (k)
 
 # outputfile = open('my_log.log', 'w')
 # outputfile.truncate() # wipe the file
