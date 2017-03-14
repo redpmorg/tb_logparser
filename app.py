@@ -4,9 +4,7 @@ __author__  = "Tiberiu Andrei Lepadatu"
 __email__   = "tiberiulepadatu14@gmail.com"
 __license__ = "None"
 
-import sys, os
-import utils as U
-import fileinput, re
+import sys, os, utils as U, fileinput, re
 
 _interval = 1
 _start = None
@@ -14,9 +12,6 @@ _end = None
 _success_filter = None
 
 # inputfile = open(os.path.join('./data/tests', value), 'r')
-# if len(list(sys.argv)) > 2:
-	# sys.argv.pop(0) #pop out the name of application file
-	# sys.argv.pop(0) #pop out the name of log test file
 args_tuple = zip(sys.argv[::2], sys.argv[1::2])
 for arg, value in args_tuple:
 	if arg == "--interval":
@@ -52,54 +47,73 @@ for line in lines:
 	if m:
 		mylist.append(m.groupdict())
 
-newlist = U.filter_by_date(mylist, _start, _end, _interval)
-# newlist_len = len(newlist)
 
-import itertools
 from operator import itemgetter
 from collections import Counter, defaultdict
-import math, datetime as dt
+from functools import reduce
+import math, datetime as dt, itertools
 
-result_list = []
-k = itemgetter('datetime')
-kk = itemgetter('request')
-newlist = sorted(newlist, key=k)
-for k, v in itertools.groupby(newlist, key=k):
-	v = sorted(v, key=kk)
+
+newlist = U.filter_by_date(mylist, _start, _end, _interval)
+_k = itemgetter('datetime')
+_kk = itemgetter('request')
+_interval = dt.timedelta(minutes=_interval)
+newlist = sorted(newlist, key=_k)
+
+# # print (newlist)
+
+# x = [{"datetime":k[0],
+# 		"request":k[1],
+# 		"status": k[2],
+# 		"total": len(list(v))
+# 		} for k, v in itertools.groupby(newlist, lambda x: (x['datetime'], x['request'], x['status']))]
+# # print (x)
+# dic = dict()
+# def check_me(s, acc=None):
+
+# 	print (s)
+# d = [k for k in map(check_me, x)]
+# print(d)
+
+
+# for k, v in itertools.groupby(x, key=itemgetter('datetime')):
+	# print (k, len(list(v))) 
+
+# for k, v in itertools.groupby(newlist, key=itemgetter('request', 'status')):
+# 	print (k, len(list(v))) 
+
+# martors = sorted({U.dt_decode(d['datetime']) for d in newlist})
+# def reduce_martors(_martors, c):
+# 	if(len(_martors) > c):
+# 		if _martors[c-1] + _interval >= _martors[c]:
+# 			del _martors[c]
+# 			reduce_martors(_martors, c)
+# 		reduce_martors(_martors, c+1)
+# reduce_martors(martors, 1)
+
+# result_list = []
+# for d in newlist:
+# 	for m in martors:
+# 		if U.dt_decode(d['datetime']) <= m+_interval:
+# 			result_list.append({"g_datetime": U.dt_encode(m), "request": d['request'], "stat": d['status'], "datetime": d['datetime']})
+
+for d, v in itertools.groupby(sorted(result_list, key=itemgetter('g_datetime')), key=itemgetter('request')):
+	_v = list(sorted(v, key=_kk)).copy()
+	print(d)
 	for i, vv in itertools.groupby(v, key=kk):
-		# tc = len(list(v))
+		tc = len(list(v))
 		tv = list(vv).copy()
 		tvv = list(tv).copy()
-		success_c = sum(Counter(d['status'] \
-			for d in list(tv) if d['status'][0] == '2').values())
+		success_c = sum(Counter(d['status'] for d in list(tv) if d['status'][0] == '2').values())
 		success_tc = len(list(tvv))
-
+	print (k, list(v), "\n")
+	for kk, vv in v:
+		print (k, list((v)), "\n")
 		print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
 
-		# ddiff = U.datetime_decode(semn) - U.datetime_decode(vv['datetime'] + dt.timedelta(minutes=_interval)):
+		# ddiff = U.dt_decode(semn) - U.dt_decode(vv['datetime'] + dt.timedelta(minutes=_interval)):
 
-		# result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
-
-# print (result_list)
-
-# for k, v in Counter(result_list).items():
-# 	print (k,v)
-
-# i = 0
-# for a,b in itertools.combinations(result_list, 2):
-# 	if i < 20:
-# 		if U.datetime_decode(a['datetime']) + dt.timedelta(minutes=_interval) <= U.datetime_decode(b['datetime']):
-# 			print (a['datetime'], a['request'], a['success'], a['total'])
-# 			if a['request'] == b['request']:
-# 				print (b['datetime'], b['request'], b['success'], b['total'])
-# 		i += 1
-# print (d)
-
-
-# for elem in filter( \
-# 	lambda x: U.datetime_decode(x['datetime']) <= (U.datetime_decode(x['datetime']) + dt.timedelta(minutes=_interval)) \
-# 		, result_list):
-#     print (elem)
+		result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
 
 
 # outputfile = open('my_log.log', 'w')

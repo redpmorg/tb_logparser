@@ -1,0 +1,15 @@
+1,10c1,3
+< {'datetime': '2016-04-06T20:03', 'request': '/linux-mint.html', 'status': '300'}
+< {'datetime': '2016-04-06T20:03', 'request': '/linux-mint.html', 'status': '403'}
+< {'datetime': '2016-04-06T20:03', 'request': '/linux-mint.html', 'status': '204'}
+< {'datetime': '2016-04-06T20:03', 'request': '/linux-mint.html', 'status': '200'}
+< {'datetime': '2016-04-06T20:03', 'request': '/rl-v5.html', 'status': '405'}
+< {'datetime': '2016-04-06T20:03', 'request': '/rl-v5.html', 'status': '202'}
+< {'datetime': '2016-04-06T20:03', 'request': '/rl-v5.html', 'status': '203'}
+< {'datetime': '2016-04-06T20:03', 'request': '/rl-v5.html', 'status': '400'}
+< {'datetime': '2016-04-06T20:04', 'request': '/rl-v5.html', 'status': '300'}
+< {'datetime': '2016-04-06T20:04', 'request': '/rl-v5.html', 'status': '202'}
+---
+> 2016-04-06T20:03 1 /linux-mint.html 50.00
+> 2016-04-06T20:03 1 /rl-v5.html 50.00
+> 2016-04-06T20:04 1 /rl-v5.html 50.00

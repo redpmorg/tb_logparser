@@ -1,1 +1,1600 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"succ",
+				"success_tc"
+			],
+			[
+				"succe",
+				"success_c"
+			],
+			[
+				"tota",
+				"total_in_chunk"
+			],
+			[
+				"ittem",
+				"itemgetter〔module〕"
+			],
+			[
+				"group",
+				"groupby"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"time",
+				"timedelta〔class〕"
+			],
+			[
+				"out",
+				"outputfile"
+			],
+			[
+				"datetime",
+				"datetime_convert"
+			],
+			[
+				"filter",
+				"filter_my_data"
+			],
+			[
+				"arg",
+				"args_tuple"
+			],
+			[
+				"argument",
+				"argumentsList"
+			],
+			[
+				"forma",
+				"format_datetime〔function〕"
+			],
+			[
+				"grou",
+				"groupdict〔function〕"
+			],
+			[
+				"pa",
+				"pattern"
+			],
+			[
+				"set",
+				"set_trace	(views.py)"
+			],
+			[
+				"ra",
+				"rating	(views.py)"
+			],
+			[
+				"num",
+				"num_reviews"
+			],
+			[
+				"user_cluster",
+				"user_cluster_name"
+			],
+			[
+				"other",
+				"other_users_reviews"
+			],
+			[
+				"user_revi",
+				"user_reviews_wine_ids"
+			],
+			[
+				"user_cluster_other",
+				"user_cluster_other_members"
+			],
+			[
+				"Mo",
+				"ModelAdmin"
+			],
+			[
+				"user",
+				"username	(views.py)"
+			],
+			[
+				"max",
+				"max_length"
+			],
+			[
+				"user_re",
+				"user_reviews_wine_id"
+			],
+			[
+				"wine",
+				"wine_list	(views.py)"
+			],
+			[
+				"review",
+				"review_row"
+			],
+			[
+				"reveiw",
+				"review_row"
+			],
+			[
+				"save",
+				"save_review_from_row"
+			],
+			[
+				"revie",
+				"reviews_df"
+			],
+			[
+				"rev",
+				"review_row"
+			],
+			[
+				"re",
+				"review"
+			],
+			[
+				"ba",
+				"backends	(settings.py)"
+			],
+			[
+				"__",
+				"__file__〔variable〕"
+			],
+			[
+				"ST",
+				"STATIC_URL"
+			],
+			[
+				"Http",
+				"HttpResponseDirect"
+			],
+			[
+				"get",
+				"get_object_or_404"
+			],
+			[
+				"Revie",
+				"ReviewForm〔class〕"
+			],
+			[
+				"Model",
+				"ModelForm"
+			],
+			[
+				"im",
+				"import"
+			],
+			[
+				"html",
+				"html	html"
+			],
+			[
+				"co",
+				"comment	Django template comment"
+			],
+			[
+				"use",
+				"user_name	(models.py)"
+			],
+			[
+				"htt",
+				"http	(urls.py)"
+			],
+			[
+				"pub",
+				"pub_date	(models.py)"
+			],
+			[
+				"W",
+				"Wine	(models.py)"
+			],
+			[
+				"url",
+				"urlpatterns	(urls.py)"
+			],
+			[
+				"Re",
+				"ReviewAdmin"
+			],
+			[
+				"model",
+				"models"
+			],
+			[
+				"vo",
+				"votes"
+			],
+			[
+				"votes",
+				"voters"
+			],
+			[
+				"vot",
+				"voters"
+			],
+			[
+				"print",
+				"print_r〔function〕"
+			],
+			[
+				"STD",
+				"STDOUT	(index.php)"
+			],
+			[
+				"case",
+				"cases"
+			],
+			[
+				"catN",
+				"catName"
+			],
+			[
+				"cat",
+				"catNo"
+			],
+			[
+				"cases",
+				"$cases〔variable〕"
+			],
+			[
+				"dog",
+				"dogName"
+			],
+			[
+				"ammo",
+				"ammountOf"
+			],
+			[
+				"amm",
+				"ammountOf"
+			],
+			[
+				"ammou",
+				"$ammountOf〔variable〕"
+			],
+			[
+				"amoun",
+				"ammountOf"
+			],
+			[
+				"ammount",
+				"ammountOf"
+			],
+			[
+				"friend",
+				"friendship"
+			],
+			[
+				"frien",
+				"friendship"
+			],
+			[
+				"frie",
+				"friend1"
+			],
+			[
+				"fr",
+				"friend1"
+			],
+			[
+				"frind",
+				"friendships"
+			],
+			[
+				"check",
+				"checkFriends"
+			],
+			[
+				"friendship",
+				"$friendships〔variable〕"
+			],
+			[
+				"number",
+				"number1"
+			],
+			[
+				"st",
+				"strong	<strong>"
+			],
+			[
+				"background-si",
+				"background-size"
+			],
+			[
+				"BACKGROUND",
+				"background-size"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"qr",
+				"qrName"
+			],
+			[
+				"qs",
+				"qsName"
+			],
+			[
+				"relative",
+				"relativeCollapse"
+			],
+			[
+				"margin-",
+				"margin-left"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"back",
+				"background-clip"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"final",
+				"finalRound"
+			],
+			[
+				"dei",
+				"decision"
+			],
+			[
+				"question",
+				"questionsArray"
+			],
+			[
+				"this",
+				"thisSheet"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"ans",
+				"answersArray"
+			],
+			[
+				"arra",
+				"answersArray"
+			],
+			[
+				"answer",
+				"answersArray"
+			],
+			[
+				"Si",
+				"SimulationQuizzAnswers"
+			],
+			[
+				"Mark",
+				"MarkNomenclatorsBundle"
+			],
+			[
+				"ratingMaxi",
+				"ratingMaxiumLabel"
+			],
+			[
+				"ratingMini",
+				"ratingMinimumLabel"
+			],
+			[
+				"answ",
+				"answType"
+			],
+			[
+				"quiz",
+				"Quizzes"
+			],
+			[
+				"rating",
+				"ratingMinimum"
+			],
+			[
+				"quizz",
+				"quizzAnsw"
+			],
+			[
+				"obj",
+				"objPHPExcel"
+			],
+			[
+				"season",
+				"seasonsCalc"
+			],
+			[
+				"finai",
+				"financialLevelAtStart"
+			],
+			[
+				"simulation",
+				"simulation_description"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"simula",
+				"simulation_description"
+			],
+			[
+				"Ma",
+				"MarkSimulationBundle"
+			],
+			[
+				"applicati",
+				"application_name"
+			],
+			[
+				"Simula",
+				"Simulations"
+			],
+			[
+				"Sim",
+				"SimulationBundle"
+			],
+			[
+				"initial",
+				"initialWater"
+			],
+			[
+				"lake",
+				"_lakeLevelAtStart"
+			],
+			[
+				"ini",
+				"initial_room_water"
+			],
+			[
+				"initi",
+				"initialWater"
+			],
+			[
+				"last",
+				"lastRound"
+			],
+			[
+				"sfcati",
+				"sfactiona	Symfony2 / Controller / Action (annotated)"
+			],
+			[
+				"borde",
+				"border-collapse"
+			],
+			[
+				"ta",
+				"table-cell"
+			],
+			[
+				"app",
+				"app_param"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"status",
+				"status_previous"
+			],
+			[
+				"sfac",
+				"sfactiona	Symfony2 / Controller / Action (annotated)"
+			],
+			[
+				"Text",
+				"TextType"
+			],
+			[
+				"row",
+				"row_attr"
+			],
+			[
+				"form",
+				"form_type_extention"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app.py",
+			"settings":
+			{
+				"buffer_size": 1973,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data/tests/test1.log",
+			"settings":
+			{
+				"buffer_size": 116544,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "utils.py",
+			"settings":
+			{
+				"buffer_size": 2547,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 600.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"PHPUnit: ",
+				"PHPUnit: Run Tests"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"lis",
+				"Package Control: List Packages"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"php",
+				"PHPUnit: Run"
+			],
+			[
+				"tmpl",
+				"Tmpl: Create php"
+			],
+			[
+				"crett",
+				"Create file from Template"
+			],
+			[
+				"create ",
+				"Create file from Template"
+			],
+			[
+				"template",
+				"Create file from Template"
+			],
+			[
+				"teplate",
+				"Create file from Template"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"angula",
+				"AngularJS: Toggle - Disable All Completions"
+			],
+			[
+				"repo",
+				"Package Control: Add Repository"
+			],
+			[
+				"repos",
+				"Package Control: Add Repository"
+			],
+			[
+				"reposit",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"xde",
+				"Xdebug: Start Debugging"
+			],
+			[
+				"key",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"fold",
+				"Project: Add Folder"
+			],
+			[
+				"save ",
+				"File: Save All"
+			],
+			[
+				"pro",
+				"Project: Add Folder"
+			],
+			[
+				"PACK",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 732.0
+	},
+	"console":
+	{
+		"height": 482.0,
+		"history":
+		[
+			"show_scala_workseet",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"fsdfsdf",
+			"clear",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"clear",
+			"clean",
+			"clear",
+			"cls",
+			"clear",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(true)",
+			"sublime.log_commands(False)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"new",
+			"exit",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"glue path",
+			"glue",
+			"glue path",
+			"clear",
+			"nlog",
+			"window.get_layout()",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/drleo/tb_logparser/data",
+		"/home/drleo/tb_logparser/data/reference",
+		"/home/drleo/tb_logparser/data/tests"
+	],
+	"file_history":
+	[
+		"/home/drleo/pythonCourses/tbrosedu/README.MD",
+		"/home/drleo/pythonCourses/tbrosedu/app.py",
+		"/home/drleo/pythonCourses/tbrosedu/utils.py",
+		"/home/drleo/pythonCourses/tbrosedu/my_log.log",
+		"/home/drleo/pythonCourses/redpm/reviews/models.py",
+		"/home/drleo/pythonCourses/redpm/reviews/suggestions.py",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/user_recommendation_list.html",
+		"/home/drleo/pythonCourses/redpm/reviews/views.py",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/wine_list.html",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/base.html",
+		"/home/drleo/pythonCourses/redpm/templates/head.html",
+		"/home/drleo/pythonCourses/redpm/reviews/urls.py",
+		"/home/drleo/pythonCourses/redpm/reviews/admin.py",
+		"/home/drleo/pythonCourses/redpm/templates/registration/registration_form.html",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/user_review_list.html",
+		"/home/drleo/pythonCourses/redpm/redpm/settings.py",
+		"/home/drleo/pythonCourses/redpm/redpm/urls.py",
+		"/home/drleo/pythonCourses/redpm/data/users.csv",
+		"/home/drleo/pythonCourses/redpm/templates/base.html",
+		"/home/drleo/pythonCourses/redpm/templates/registration/registration_complete.html",
+		"/home/drleo/pythonCourses/redpm/load_csv.py",
+		"/home/drleo/pythonCourses/redpm/templates/registration/login.html",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/wine_detail.html",
+		"/home/drleo/pythonCourses/redpm/static/js/leo.js",
+		"/home/drleo/pythonCourses/redpm/reviews/forms.py",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/review_detail.html",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/review_list.html",
+		"/home/drleo/pythonCourses/redpm/reviews/templates/reviews/head.html",
+		"/home/drleo/pythonCourses/redpm/redpm/views.py",
+		"/home/drleo/pythonCourses/redpm/templates/index.html",
+		"/home/drleo/pythonCourses/redpm/redpm/templates/index.html",
+		"/home/drleo/pythonCourses/redpm/invoices/models.py",
+		"/home/drleo/scalaCourses/1_FunctionalPrincipleInScala/week2/src/main/scala/funsets/FunSets.scala",
+		"/home/drleo/scalaCourses/InlineTesting/bin/testingWorkseet.sc",
+		"/home/drleo/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/drleo/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/var/www/10xrecruit/catVsDog/index.php",
+		"/var/www/10xrecruit/catVsDog/samples/sample.in",
+		"/var/www/10xrecruit/moneymatters/index_try.php",
+		"/var/www/10xrecruit/moneymatters/index.php",
+		"/var/www/10xrecruit/moneymatters/samples/money_sample.00.in",
+		"/var/www/10xrecruit/moneymatters/samples/money_sample.01.in",
+		"/var/www/10xrecruit/moneymatters/samples/sample.out",
+		"/var/www/10xrecruit/moneymatters/internetSolution",
+		"/var/www/10xrecruit/README.MD",
+		"/var/www/10xrecruit/moneymatters/theProblem",
+		"/var/www/10xrecruit/moneymatters/samples/money_sample.00.ans",
+		"/var/www/10xrecruit/generalConsideration",
+		"/var/www/10xrecruit/10xrecruit.sublime-project",
+		"/home/drleo/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/var/www/10xrecruit/moneymatters/index_old.php",
+		"/var/www/10xrecruit/aDifferentProblem/index.php",
+		"/var/www/10xrecruit/differentDirections/index.php",
+		"/var/www/10xrecruit/aDifferentProblem/samples/sample.in",
+		"/var/www/10xrecruit/differentDirections/sample.in",
+		"/var/www/jsPatterns/5_FunctionPatterns/API Pattern/partial_application.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/7_for_in_loops.js",
+		"/home/drleo/.config/sublime-text-3/Packages/User/node.sublime-build",
+		"/var/www/jsPatterns/1_GeneralPatterns/6_foor_loops.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/5_hoisting.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/single_var_patterns.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/access_to_global.js",
+		"/var/www/jsPatterns/accessToGlobals.html",
+		"/var/www/jsPatterns/ObserverPattern.html",
+		"/var/www/jsPatterns/1_GeneralPatterns/conditionals.js",
+		"/var/www/jsPatterns/1_GeneralPatterns/functionDeclaration.js",
+		"/var/www/jsDesignPatterns/index.html",
+		"/var/www/jsDesignPatterns/js/EventDispatcher.js",
+		"/var/www/jsDesignPatterns/js/App.js",
+		"/var/www/jsDesignPatterns/js/TaskView.js",
+		"/var/www/jsDesignPatterns/js/TaskModel.js",
+		"/var/www/jsDesignPatterns/js/main.js",
+		"/var/www/jsDesignPatterns/js/test.js",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Utils/GeneralActions.php",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Resources/config/services.yml",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Twig/CallUserFunctionExtension.php",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Controller/SimulationsController.php",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Repository/SimulationAnalyticInstanceRepository.php",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Utils/Calculation.php",
+		"/home/leo/Desktop/signature.html",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalTakeDecision.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalStartGameMessages.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/css/game.css",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Controller/DashboardController.php",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Utils/Constants.php",
+		"/home/leo/Desktop/rccy.sql",
+		"/home/leo/Desktop/rccy_modified.sql",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalQuestionnaire.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/css/quizz.css",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/gameBoard.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/js/game.js",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/game_header.html.twig",
+		"/var/www/romit/simulation/src/Mark/UsersBundle/Entity/Groups.php",
+		"/var/www/romit/simulation/web/app_dev.php",
+		"/var/www/romit/simulation/src/Mark/LoginBundle/Resources/public/js/login.js",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Simulations/Tabs/quizzes.html.twig",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Resources/views/general_header.html.twig",
+		"/var/www/romit/simulation/app/config/config.yml",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Resources/public/css/general.css",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Resources/public/css/fonts.css",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/rotateMobileDevice.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalFinishSimulation.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalInformation.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalSmallInformation.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Controller/GameController.php",
+		"/home/leo/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/leo/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/css/game_mobile.css",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/modalPumpingStation.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/css/game_fail.css",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/gameBoardFail.html.twig",
+		"/var/www/romit/simulation/src/Mark/LoginBundle/Resources/views/Default/login.html.twig",
+		"/var/www/romit/simulation/src/Mark/LoginBundle/Resources/public/css/login.css",
+		"/home/leo/.config/sublime-text-3/Packages/User/Distraction Free.sublime-settings",
+		"/home/leo/.config/sublime-text-3/Packages/User/JavaScript.sublime-settings",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Simulations/Tabs/seasons.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/js/simulationMethods.js",
+		"/home/leo/Documents/text/index.html",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Simulations/simulationsList.html.twig",
+		"/var/www/romit/simulation/src/Mark/GeneralBundle/Entity/Files.php",
+		"/var/www/romit/simulation/src/Mark/LoginBundle/Resources/views/base.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Game/header.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Simulations/Tabs/valueAtStart.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/public/js/dashboard.js",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Resources/views/Dashboard/instances.html.twig",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Entity/SimulationAnalyticInstance.php",
+		"/var/www/romit/simulation/vendor/phpoffice/phpexcel/Classes/PHPExcel/Style/Color.php",
+		"/var/www/romit/simulation/src/Mark/SimulationBundle/Repository/SimulationQuizzesRepository.php"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<project>",
+			"/var/www/romit/simulation/src",
+			"<project>",
+			"C:\\wamp\\www\\simulation\\src\\Mark",
+			"<project>",
+			"/home/leo/WebProjects/redpm/redcms/application/controllers",
+			"<project>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ubuntu-gnome",
+			"	\n",
+			"removed",
+			"mydict",
+			"()",
+			"settings",
+			"%}",
+			"{%",
+			"data(",
+			"request",
+			"review_list",
+			"reviews",
+			"context",
+			"all_ratting",
+			"&&",
+			"vis",
+			"_y",
+			"_x",
+			"ammountOf",
+			"balance",
+			"{\n",
+			"$x",
+			"x",
+			"d1",
+			"buildSimulationRoomsAction",
+			"p ",
+			"line-height:0.5;",
+			"line-height:0.5; ",
+			"overall_sentiment",
+			"overall",
+			"close",
+			"http:\\\\/\\\\/rccy\\\\/wordpress\\\\/",
+			"rccy",
+			"http://",
+			"http://rccy/wordpress",
+			"http://",
+			"rccy",
+			"http:\\\\/\\\\/rccy\\\\/wordpress",
+			"rccy",
+			"http:\\/\\/rccy\\/wordpress",
+			"http://rccy/wordpress",
+			"nano",
+			"info-modal",
+			"fixedCost",
+			"body",
+			".game-window",
+			"html",
+			".game-window",
+			"window",
+			"banner",
+			".game-window",
+			"setActiveSheetIndex",
+			"initializeCurrentRound",
+			"cal",
+			"	h2 { font-size: 24px; }\n	h5 { font-size: 12px; }\n	h4 { font-size: 15px; margin-top: 3px; margin-bottom: 3px; }\n	hr { margin-top: 10px; margin-bottom: 10px; }\n	.modal-header { padding: 0; }\n\n	#take-decision-modal .decision-label { max-width: 12em; height: 54px;}\n\n",
+			"typeof",
+			"0 0",
+			"    0 0 ",
+			" 0 0 ",
+			"{ ma",
+			"0   0 ",
+			"   0   0 ",
+			"   0 ",
+			"0 0",
+			"0 ",
+			";\n	}",
+			"{\n		margin:",
+			"modal",
+			"sentiment",
+			"deci",
+			"sentiment-div",
+			"slider",
+			"questionnaire-modal",
+			"getSheet(2)",
+			"\n		",
+			"getSheet(2)\n",
+			"getSheet(2)",
+			"col-md-3 col-sm-",
+			"col-md-",
+			"delete",
+			"deleteFiles",
+			"web",
+			"deleteFile",
+			"remove",
+			"background: url(",
+			"url('bundles/",
+			" url('../images",
+			"url('../",
+			"url",
+			"General",
+			"fixedcost",
+			"-3",
+			"lg-3",
+			"financial",
+			"001590",
+			"volcoin",
+			"pumpFlag",
+			"deci",
+			"decision_is_taken",
+			"decisi",
+			"volcoins",
+			"volcoin",
+			"setWaterAmmount",
+			"index",
+			"answersInRoundArray",
+			"answers",
+			"$answ",
+			"_answs",
+			"$answ",
+			"$quizAnswers",
+			"Maxium",
+			"answerType",
+			"Type",
+			"answType",
+			"Type",
+			"&#",
+			"&#128516;",
+			"\"&#128516;",
+			"\"&#",
+			";",
+			"</span><br>",
+			"<span class=\\\"tickface\\\">",
+			"collapseRelLevel",
+			"simulation",
+			"$b",
+			"b",
+			"seasonsCalc",
+			"		->"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"http:\\\\/\\\\/5.2.228.122:85\\\\/wordpress\\\\/",
+			"http://5.2.228.122:85",
+			"",
+			"/",
+			"\n		",
+			"leonardlepadatu@gmail.com",
+			"$A",
+			"$T",
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1973,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1567,
+								1567
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "data/tests/test1.log",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 116544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								59,
+								59
+							],
+							[
+								429,
+								429
+							],
+							[
+								1007,
+								1007
+							],
+							[
+								1120,
+								1120
+							],
+							[
+								1362,
+								1362
+							],
+							[
+								1474,
+								1474
+							],
+							[
+								1600,
+								1600
+							],
+							[
+								1732,
+								1732
+							],
+							[
+								1969,
+								1969
+							],
+							[
+								2082,
+								2082
+							],
+							[
+								2312,
+								2312
+							],
+							[
+								2429,
+								2429
+							],
+							[
+								2546,
+								2546
+							]
+						],
+						"settings":
+						{
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "utils.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2547,
+								2547
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"git_gutter_enabled": true,
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1296.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "app.sublime-project",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"phpexcelw",
+				"vendor/phpoffice/phpexcel/Classes/PHPExcel/Worksheet.php"
+			],
+			[
+				"constant",
+				"src/Mark/SimulationBundle/Utils/Constants.php"
+			],
+			[
+				"constan",
+				"src/Mark/SimulationBundle/Utils/Constants.php"
+			],
+			[
+				"consta",
+				"src/Mark/SimulationBundle/Utils/Constants.php"
+			],
+			[
+				"simulations",
+				"src/Mark/SimulationBundle/Entity/Simulations.php"
+			],
+			[
+				"users",
+				"src/Mark/UsersBundle/Entity/Users.php"
+			],
+			[
+				"phpexc",
+				"vendor/phpoffice/phpexcel/Classes/PHPExcel.php"
+			],
+			[
+				"simulationmap",
+				"src/Mark/SimulationBundle/Entity/SimulationMapBalance.php"
+			],
+			[
+				"cons",
+				"src/Mark/SimulationBundle/Utils/Constants.php"
+			],
+			[
+				"calcu",
+				"src/Mark/SimulationBundle/Utils/Calculation.php"
+			],
+			[
+				"simulationmapbalance",
+				"src/Mark/SimulationBundle/Repository/SimulationMapBalanceRepository.php"
+			],
+			[
+				"choicetova",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/Extension/Core/DataTransformer/ChoiceToValueTransformer.php"
+			],
+			[
+				"general",
+				"src/Mark/GeneralBundle/Utils/GeneralActions.php"
+			],
+			[
+				"optionresolver",
+				"vendor/symfony/symfony/src/Symfony/Component/OptionsResolver/OptionsResolver.php"
+			],
+			[
+				"formbuilde",
+				"vendor/symfony/symfony/src/Symfony/Component/Form/FormBuilder.php"
+			],
+			[
+				"nomen",
+				"src/Mark/GeneralBundle/Resources/views/Default/nomenclator.html.twig"
+			],
+			[
+				"arraycoll",
+				"vendor/doctrine/collections/lib/Doctrine/Common/Collections/ArrayCollection.php"
+			],
+			[
+				"querybui",
+				"vendor/doctrine/orm/lib/Doctrine/ORM/QueryBuilder.php"
+			],
+			[
+				"criter",
+				"vendor/doctrine/collections/lib/Doctrine/Common/Collections/Criteria.php"
+			],
+			[
+				"repos",
+				"vendor/doctrine/orm/lib/Doctrine/ORM/Repository/RepositoryFactory.php"
+			],
+			[
+				"criteria",
+				"vendor/doctrine/collections/lib/Doctrine/Common/Collections/Criteria.php"
+			],
+			[
+				"calcula",
+				"src/Mark/SimulationBundle/Utils/Calculation.php"
+			],
+			[
+				"simulationana",
+				"src/Mark/SimulationBundle/Entity/SimulationAnalyticInstance.php"
+			],
+			[
+				"mood",
+				"web/bundles/marksimulation/css/mood.css"
+			],
+			[
+				"calc",
+				"src/Mark/SimulationBundle/Utils/Calculation.php"
+			],
+			[
+				"const",
+				"src/Mark/SimulationBundle/Utils/Constants.php"
+			],
+			[
+				"simulationmapre",
+				"src\\Mark\\SimulationBundle\\Repository\\SimulationMapRepository.php"
+			],
+			[
+				"simulation",
+				"src\\Mark\\SimulationBundle\\Entity\\Simulations.php"
+			],
+			[
+				"simulationanal",
+				"src\\Mark\\SimulationBundle\\Entity\\SimulationAnalyticInstance.php"
+			],
+			[
+				"arraycollec",
+				"vendor\\doctrine\\collections\\lib\\Doctrine\\Common\\Collections\\ArrayCollection.php"
+			],
+			[
+				"simulationm",
+				"src\\Mark\\SimulationBundle\\Entity\\SimulationMap.php"
+			],
+			[
+				"calculation",
+				"src\\Mark\\SimulationBundle\\Utils\\Calculation.php"
+			],
+			[
+				"simulationma",
+				"src\\Mark\\SimulationBundle\\Entity\\SimulationMap.php"
+			],
+			[
+				"cosntan",
+				"src\\Mark\\SimulationBundle\\Utils\\Constants.php"
+			],
+			[
+				"calculat",
+				"src\\Mark\\SimulationBundle\\Utils\\Calculation.php"
+			],
+			[
+				"businessc",
+				"src\\Mark\\NomenclatorsBundle\\Entity\\BusinessCategories.php"
+			],
+			[
+				"businesses",
+				"src\\Mark\\NomenclatorsBundle\\Entity\\Businesses.php"
+			],
+			[
+				"clacula",
+				"src\\Mark\\SimulationBundle\\Utils\\Calculation.php"
+			],
+			[
+				"business",
+				"src\\Mark\\SimulationBundle\\Entity\\Business.php"
+			],
+			[
+				"busine",
+				"src\\Mark\\SimulationBundle\\Entity\\Business.php"
+			],
+			[
+				"user.ph",
+				"vendor\\doctrine\\data-fixtures\\tests\\Doctrine\\Tests\\Common\\DataFixtures\\TestEntity\\User.php"
+			],
+			[
+				"users.php",
+				"src\\Mark\\UsersBundle\\Entity\\Users.php"
+			],
+			[
+				"users.ph",
+				"src\\Mark\\UsersBundle\\Entity\\Users.php"
+			],
+			[
+				"usersmgcontr",
+				"src\\Mark\\UsersBundle\\Controller\\UsersMgController.php"
+			],
+			[
+				"files",
+				"src\\Mark\\GeneralBundle\\Entity\\Files.php"
+			],
+			[
+				"form/form",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form\\Form.php"
+			],
+			[
+				"contro",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller.php"
+			],
+			[
+				"fomrfactory",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form\\FormFactory.php"
+			],
+			[
+				"files.php",
+				"src\\Mark\\GeneralBundle\\Entity\\Files.php"
+			],
+			[
+				"generalaction",
+				"src\\Mark\\GeneralBundle\\Utils\\GeneralActions.php"
+			],
+			[
+				"file/file",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\HttpFoundation\\File\\File.php"
+			],
+			[
+				"controller/con",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller.php"
+			],
+			[
+				"quizquest",
+				"src\\Mark\\NomenclatorsBundle\\Repository\\QuizQuestionsRepository.php"
+			],
+			[
+				"busin",
+				"src\\Mark\\NomenclatorsBundle\\Entity\\BusinessCategories.php"
+			],
+			[
+				"containerawa",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\DependencyInjection\\ContainerAware.php"
+			],
+			[
+				"constraint",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Validator\\Constraint.php"
+			],
+			[
+				"uniqueentityva",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator.php"
+			],
+			[
+				"uniqu",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Doctrine\\Validator\\Constraints\\UniqueEntityValidator.php"
+			],
+			[
+				"validator",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Validator\\Validator.php"
+			],
+			[
+				"token/storage",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\Authentication\\Token\\Storage\\TokenStorage.php"
+			],
+			[
+				"form/formbui",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Form\\FormBuilder.php"
+			],
+			[
+				"file",
+				"src\\Mark\\GeneralBundle\\Entity\\Files.php"
+			],
+			[
+				"menuc",
+				"src\\Mark\\MenuBundle\\Controller\\ManageMenuController.php"
+			],
+			[
+				"user",
+				"src\\Mark\\LoginBundle\\Entity\\Users.php"
+			],
+			[
+				"manag",
+				"src\\Mark\\MenuBundle\\Controller\\ManageMenuController.php"
+			],
+			[
+				"genera",
+				"src\\Mark\\GeneralBundle\\Resources\\views\\general_header.html.twig"
+			],
+			[
+				"config",
+				"app\\config\\config.yml"
+			],
+			[
+				"confi",
+				"app\\config\\config.yml"
+			],
+			[
+				"con",
+				"app\\config\\config.yml"
+			],
+			[
+				"authenticationutils",
+				"vendor\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Http\\Authentication\\AuthenticationUtils.php"
+			],
+			[
+				"userinter",
+				"tets\\vendor\\symfony\\symfony\\src\\Symfony\\Component\\Security\\Core\\User\\UserInterface.php"
+			],
+			[
+				"bun",
+				"testing/testing2/testing3/Bunic.php"
+			],
+			[
+				"index",
+				"app/controllers/IndexController.php"
+			],
+			[
+				"loa",
+				"app/config/loader.php"
+			],
+			[
+				"",
+				"app/views/index.phtml"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 750.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/var/www/10xrecruit/10xrecruit.sublime-project"
+			]
+		],
+		"width": 570.0
+	},
+	"select_symbol":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 400.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 461.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
