@@ -61,12 +61,13 @@ from collections import Counter, defaultdict
 import math, datetime as dt
 
 result_list = []
-k = itemgetter('datetime')
-kk = itemgetter('request')
-newlist = sorted(newlist, key=k)
-for k, v in itertools.groupby(newlist, key=k):
-	v = sorted(v, key=kk)
-	for i, vv in itertools.groupby(v, key=kk):
+_interval = dt.timedelta(minutes=_interval)
+_k = itemgetter('datetime')
+_kk = itemgetter('request')
+newlist = sorted(newlist, key=_k)
+for k, v in itertools.groupby(newlist, key=_k):
+	v = sorted(v, key=_kk)
+	for i, vv in itertools.groupby(v, key=_kk):
 		# tc = len(list(v))
 		tv = list(vv).copy()
 		tvv = list(tv).copy()
@@ -74,32 +75,14 @@ for k, v in itertools.groupby(newlist, key=k):
 			for d in list(tv) if d['status'][0] == '2').values())
 		success_tc = len(list(tvv))
 
-		print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
+		# print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
 
-		# ddiff = U.datetime_decode(semn) - U.datetime_decode(vv['datetime'] + dt.timedelta(minutes=_interval)):
+		# ddiff = U.datetime_decode(semn) - (U.datetime_decode(vv['datetime']) + _interval):
 
-		# result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
+		result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
 
 # print (result_list)
 
-# for k, v in Counter(result_list).items():
-# 	print (k,v)
-
-# i = 0
-# for a,b in itertools.combinations(result_list, 2):
-# 	if i < 20:
-# 		if U.datetime_decode(a['datetime']) + dt.timedelta(minutes=_interval) <= U.datetime_decode(b['datetime']):
-# 			print (a['datetime'], a['request'], a['success'], a['total'])
-# 			if a['request'] == b['request']:
-# 				print (b['datetime'], b['request'], b['success'], b['total'])
-# 		i += 1
-# print (d)
-
-
-# for elem in filter( \
-# 	lambda x: U.datetime_decode(x['datetime']) <= (U.datetime_decode(x['datetime']) + dt.timedelta(minutes=_interval)) \
-# 		, result_list):
-#     print (elem)
 
 
 # outputfile = open('my_log.log', 'w')
