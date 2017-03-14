@@ -97,11 +97,15 @@ newlist = sorted(newlist, key=_k)
 # 		if U.dt_decode(d['datetime']) <= m+_interval:
 # 			result_list.append({"g_datetime": U.dt_encode(m), "request": d['request'], "stat": d['status'], "datetime": d['datetime']})
 
-for d, v in itertools.groupby(sorted(result_list, key=itemgetter('g_datetime')), key=itemgetter('request')):
-	_v = list(sorted(v, key=_kk)).copy()
-	print(d)
-	for i, vv in itertools.groupby(v, key=kk):
-		tc = len(list(v))
+
+result_list = []
+_k = itemgetter('datetime')
+_kk = itemgetter('request')
+newlist = sorted(newlist, key=_k)
+for k, v in itertools.groupby(newlist, key=_k):
+	v = sorted(v, key=_kk)
+	for i, vv in itertools.groupby(v, key=_kk):
+		# tc = len(list(v))
 		tv = list(vv).copy()
 		tvv = list(tv).copy()
 		success_c = sum(Counter(d['status'] for d in list(tv) if d['status'][0] == '2').values())
@@ -114,6 +118,14 @@ for d, v in itertools.groupby(sorted(result_list, key=itemgetter('g_datetime')),
 		# ddiff = U.dt_decode(semn) - U.dt_decode(vv['datetime'] + dt.timedelta(minutes=_interval)):
 
 		result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
+
+		# print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
+
+		# ddiff = U.datetime_decode(semn) - (U.datetime_decode(vv['datetime']) + _interval):
+
+		result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
+
+# print (result_list)
 
 
 # outputfile = open('my_log.log', 'w')
