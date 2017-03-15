@@ -15,21 +15,16 @@ _success_filter = None
 
 # inputfile = open(os.path.join('./data/tests', value), 'r')
 # if len(list(sys.argv)) > 2:
-	# sys.argv.pop(0) #pop out the name of application file
-	# sys.argv.pop(0) #pop out the name of log test file
 args_tuple = zip(sys.argv[::2], sys.argv[1::2])
 for arg, value in args_tuple:
 	if arg == "--interval":
 		_interval = int(value)
 	elif arg == "--start":
 		_start = value
-		#do something
 	elif arg == "--end":
 		_end = value
-		#do something else
 	elif arg == "--success":
 		_success_filter = value
-		#do somethign else
 
 del sys.argv[2:]
 lines = fileinput.input()
@@ -53,7 +48,6 @@ for line in lines:
 		mylist.append(m.groupdict())
 
 newlist = U.filter_by_date(mylist, _start, _end, _interval)
-# newlist_len = len(newlist)
 
 import itertools
 from operator import itemgetter
@@ -86,8 +80,16 @@ dic = []
 for k, g in itertools.groupby(result_list, key=itemgetter('datetime')):
     dic.append([i for i in map(itemgetter('datetime', 'request', 'success', 'total'), g)])
 
-for k in itertools.chain(dic):
-	print (k)
+print (_interval)
+reduced_date = defaultdict(int)
+all_date = [k[0][0] for k in itertools.chain(dic)]
+for k in itertools.combinations(all_date,2):
+	if U.dt_decode(k[0]) <= U.dt_decode(k[1])+_interval:
+		reduced_date[k[0]] +=1
+	else:
+		reduced_date[k[1]] +=1
+
+print (reduced_date)
 
 # outputfile = open('my_log.log', 'w')
 # outputfile.truncate() # wipe the file
