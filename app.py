@@ -86,7 +86,8 @@ _total = rl[0]['total']
 compare = [_dt]
 result = {}
 result[_dt] = {}
-result[_dt][_request] = {"total": _total, "success": _success_cnt}
+result[_dt][_dt] = {}
+result[_dt][_dt][_request] = {"total": _total, "success": _success_cnt}
 
 for r in rl[1:]:
 	dt = r['datetime']
@@ -95,21 +96,41 @@ for r in rl[1:]:
 	tot = r['total']
 	#
 	if U.dt_decode(compare[0]) + interval >= U.dt_decode(dt):
-		if dt in result:
-			if req in result[dt]:
-				result[compare[0]][req]['success'] = succ + result[dt][req]['success']
-				result[compare[0]][req]['total'] = tot + result[dt][req]['total']
+		if dt in result[compare[0]]:
+			if req in result[compare[0]][dt]:
+				result[compare[0]][dt][req]['success'] = succ + result[dt][req]['success']
+				result[compare[0]][dt][req]['total'] = tot + result[dt][req]['total']
 			else:
-				result[compare[0]][req] = {'success': succ, 'total': tot}
-		# else:
-		# 	result[] = {}
-		# 	result[]{req: succ}
+				result[compare[0]][dt][req] = {'success': succ, 'total': tot}
+		else:
+			result[compare[0]][dt] = {}
+			result[compare[0]][dt][req] = {'success': succ, 'total': tot}
 	else:
-		result.update({dt: {req: {'success': succ, 'total': tot}}})
+		result[dt] = {}
+		result[dt][dt] = {}
+		result[dt][dt][req] = {"success": succ, "total": tot,}
 		compare = [dt]
 
 
-print (result)
+for k,v in sorted(result.items()):
+	print (k, sorted(list(v)))
+
+	# if U.dt_decode(compare[0]) + interval >= U.dt_decode(dt):
+	# 	if dt in result:
+	# 		if req in result[dt]:
+	# 			result[compare[0]][req]['success'] = succ + result[dt][req]['success']
+	# 			result[compare[0]][req]['total'] = tot + result[dt][req]['total']
+	# 		else:
+	# 			result[compare[0]][req] = {'success': succ, 'total': tot}
+	# 	else:
+	# 		result[compare = {}
+	# 	# 	result[]{req: succ}
+	# else:
+	# 	result.update({dt: {req: {'success': succ, 'total': tot}}})
+	# 	compare = [dt]
+
+
+# print (result)
 
 
 # dic = []
