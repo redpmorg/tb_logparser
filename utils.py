@@ -37,7 +37,7 @@ def dt_decode(dtime):
 	r =  dt.datetime.strptime(dtime, '%Y-%m-%d %H:%M:%S')
 	return r
 
-def filter_by_date(mylist, start, end, interval):
+def filter_by_date(mylist, start, end):
 	mylist = sorted(mylist, key=lambda x: (dt_convert(x), x['request'])) # sort by date
 	start = dt_decode(
 				dt_convert(mylist[0]['datetime'])

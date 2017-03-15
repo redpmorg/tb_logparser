@@ -47,15 +47,15 @@ for line in lines:
 	if m:
 		mylist.append(m.groupdict())
 
-newlist = U.filter_by_date(mylist, _start, _end, _interval)
+newlist = U.filter_by_date(mylist, _start, _end)
 
 import itertools
 from operator import itemgetter
 from collections import Counter, defaultdict
 import math, datetime as dt
 
-result_list = []
-_interval = dt.timedelta(minutes=_interval)
+rl = []
+interval = dt.timedelta(minutes=_interval)
 _k = itemgetter('datetime')
 _kk = itemgetter('request')
 newlist = sorted(newlist, key=_k)
@@ -70,26 +70,66 @@ for k, v in itertools.groupby(newlist, key=_k):
 		success_tc = len(list(tvv))
 
 		# this will pass tests from 0 to 3 -> 40%
-		# print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
+		# print (k, interval, i, "%.2f" % float(success_c/success_tc*100))
 
-		result_list.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
+		rl.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
 
-# print (result_list)
+# print (rl)
 
-dic = []
-for k, g in itertools.groupby(result_list, key=itemgetter('datetime')):
-    dic.append([i for i in map(itemgetter('datetime', 'request', 'success', 'total'), g)])
 
-print (_interval)
-reduced_date = defaultdict(int)
-all_date = [k[0][0] for k in itertools.chain(dic)]
-for k in itertools.combinations(all_date,2):
-	if U.dt_decode(k[0]) <= U.dt_decode(k[1])+_interval:
-		reduced_date[k[0]] +=1
+# import pdb; pdb.set_trace()
+
+_dt = rl[0]['datetime']
+_success_cnt = rl[0]['success']
+_request = rl[0]['request']
+_total = rl[0]['total']
+compare = [_dt]
+result = {}
+result[_dt] = {}
+result[_dt][_request] = {"total": _total, "success": _success_cnt}
+
+for r in rl[1:]:
+	dt = r['datetime']
+	req = r['request']
+	succ = r['success']
+	tot = r['total']
+	#
+	if U.dt_decode(compare[0]) + interval >= U.dt_decode(dt):
+		if dt in result:
+			if req in result[dt]:
+				result[compare[0]][req]['success'] = succ + result[dt][req]['success']
+				result[compare[0]][req]['total'] = tot + result[dt][req]['total']
+			else:
+				result[compare[0]][req] = {'success': succ, 'total': tot}
+		# else:
+		# 	result[] = {}
+		# 	result[]{req: succ}
 	else:
-		reduced_date[k[1]] +=1
+		result.update({dt: {req: {'success': succ, 'total': tot}}})
+		compare = [dt]
 
-print (reduced_date)
+
+print (result)
+
+
+# dic = []
+# for k, g in itertools.groupby(result_list, key=itemgetter('datetime')):
+#     dic.append([i for i in map(itemgetter('datetime', 'request', 'success', 'total'), g)])
+
+# print (dic[0])
+# print (next(itertools.groupby(dic, key=itemgetter(0))))
+
+# all_date = [k[0][0] for k in itertools.chain(dic)]
+# print (all_date)
+
+# reduced_date = defaultdict(int)
+# for k in itertools.combinations(all_date,2):
+# 	if U.dt_decode(k[0]) <= U.dt_decode(k[1])+interval:
+# 		reduced_date[k[0]] +=1
+# 	else:
+# 		reduced_date[k[1]] +=1
+
+# print (reduced_date)
 
 # outputfile = open('my_log.log', 'w')
 # outputfile.truncate() # wipe the file
