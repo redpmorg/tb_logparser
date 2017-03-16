@@ -1,0 +1,1 @@
+[('./app.py', 'tests/test10.log'), ('--interval', '30'), ('--success', '20x,3xx,404')]

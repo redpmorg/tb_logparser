@@ -51,7 +51,7 @@ newlist = U.filter_by_date(mylist, _start, _end)
 
 import itertools
 from operator import itemgetter
-from collections import Counter, defaultdict
+from collections import Counter, defaultdict, OrderedDict
 import math, datetime as dt
 
 
@@ -72,8 +72,6 @@ for k, v in itertools.groupby(newlist, key=_k):
 		rl.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
 
 
-# debugger
-# import pdb; pdb.set_trace()
 
 _dt = rl[0]['datetime']
 _success_cnt = rl[0]['success']
@@ -81,39 +79,45 @@ _request = rl[0]['request']
 _total = rl[0]['total']
 compare = [_dt]
 result = {}
-result[_dt] = {}
-result[_dt][_request] = {"total": _total, "success": _success_cnt, "datetime": _dt}
+result[_request] = {}
+result[_request][_dt] = {"total": _total, "success": _success_cnt, "datetime": _dt}
 
-# {'2016-03-01T08:54', '/go/bla.html':{"total": 5, "success": 14, "datetime": '2016-03-01T08:54'}}
-# {'2016-03-01T08:55', '/go/bla.html':{"total": 2, "success": 7, "datetime": '2016-03-01T08:54'}}
+# import pdb; pdb.set_trace()   # debugger
 
 for r in rl[1:]:
 	dt = r['datetime']
 	req = r['request']
 	succ = r['success']
 	tot = r['total']
-	#
-	if req in result[compare[0]]:
+	###
+	if req in result:
 		if U.dt_decode(compare[0]) + interval > U.dt_decode(dt):
-				# result[compare[0]][req]['datetime'] = compare[0]
-				result[compare[0]][req]['success'] += succ
-				result[compare[0]][req]['total'] += tot
+			if dt in result[req]:
+				result[req][compare[0]]['success'] += succ
+				result[req][compare[0]]['total'] += tot
+				# result[req][compare[0]]['datetime'] = compare[0]
+				# compare = [dt]
+			else:
+				result[req][dt] = {}
+				result[req][dt] = {"total": tot, "success": succ, "datetime": dt}
 		else:
-			result[dt] = {}
-			result[dt][req] = {"total": tot, "success": succ, "datetime": dt}
-			compare = [dt]
+			# result[req] = {}
+			result[req][dt] = {"total": tot, "success": succ, "datetime": dt}
+			# compare = [dt]
 	else:
-		result[compare[0]][req] = {"total": tot, "success": succ, "datetime": dt}
-
+		result[req] = {}
+		result[req][dt] = {"total": tot, "success": succ, "datetime": dt}
+		compare = [dt]
 
 #build report
-def complex_search(x):
-	return (x[1]['datetime'], x[0].replace("_", ""))
+result = OrderedDict(result.items(), key=lambda x: (x[0].replace("_", ""), x[1]["datetime"]))
+# print (result)
 
-result = sorted(result.items(), key=itemgetter(0))
-for k,v in result:
-	values = sorted(v.items(), key=lambda x: complex_search(x))
+for req, v in result.items():
+	print(v)
+	# values = v
+	# values = sorted(v.items(), key=lambda x: (x[1]['datetime']))
 	# print(values)
 	# print ("######################################################")
-	for req, vv in values:
-		print (vv['datetime'], _interval, req, "%.2f" % float(vv['success']/vv['total']*100))
+	# for comp_d, vv in values:
+		# print (vv['datetime'], _interval, req, "%.2f" % float(vv['success']/vv['total']*100))
