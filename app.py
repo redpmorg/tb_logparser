@@ -54,11 +54,13 @@ from operator import itemgetter
 from collections import Counter, defaultdict
 import math, datetime as dt
 
+
 rl = []
 interval = dt.timedelta(minutes=_interval)
 _k = itemgetter('datetime')
 _kk = itemgetter('request')
 newlist = sorted(newlist, key=_k)
+
 for k, v in itertools.groupby(newlist, key=_k):
 	v = sorted(v, key=_kk)
 	for i, vv in itertools.groupby(v, key=_kk):
@@ -67,13 +69,8 @@ for k, v in itertools.groupby(newlist, key=_k):
 		success_c = sum(Counter(d['status'] \
 			for d in list(tv) if d['status'][0] == '2').values())
 		success_tc = len(list(tvv))
-
-		# this will pass tests from 0 to 3 -> 40%
-		# print (k, _interval, i, "%.2f" % float(success_c/success_tc*100))
-
 		rl.append({"datetime": k, "request": i, "success": success_c, "total": success_tc})
 
-# print (rl)
 
 # debugger
 # import pdb; pdb.set_trace()
@@ -85,8 +82,10 @@ _total = rl[0]['total']
 compare = [_dt]
 result = {}
 result[_dt] = {}
-result[_dt][_request] = {}
-result[_dt][_request][_dt] = {"total": _total, "success": _success_cnt}
+result[_dt][_request] = {"total": _total, "success": _success_cnt, "datetime": _dt}
+
+# {'2016-03-01T08:54', '/go/bla.html':{"total": 5, "success": 14, "datetime": '2016-03-01T08:54'}}
+# {'2016-03-01T08:55', '/go/bla.html':{"total": 2, "success": 7, "datetime": '2016-03-01T08:54'}}
 
 for r in rl[1:]:
 	dt = r['datetime']
@@ -94,41 +93,27 @@ for r in rl[1:]:
 	succ = r['success']
 	tot = r['total']
 	#
-	if U.dt_decode(compare[0]) + interval >= U.dt_decode(dt):
-		if req in result[compare[0]]:
-			if dt in result[compare[0]][req]:
-				result[compare[0]][req][dt]['success'] = succ + result[dt][req]['success']
-				result[compare[0]][req][dt]['total'] = tot + result[dt][req]['total']
-			else:
-				# result[compare[0]][req] = {}
-				result[compare[0]][req][dt] = {'success': succ, 'total': tot}
+	if req in result[compare[0]]:
+		if U.dt_decode(compare[0]) + interval > U.dt_decode(dt):
+				# result[compare[0]][req]['datetime'] = compare[0]
+				result[compare[0]][req]['success'] += succ
+				result[compare[0]][req]['total'] += tot
 		else:
-			# result[compare[0]] = {}
-			result[compare[0]][req] = {}
-			result[compare[0]][req][dt] = {'success': succ, 'total': tot}
+			result[dt] = {}
+			result[dt][req] = {"total": tot, "success": succ, "datetime": dt}
+			compare = [dt]
 	else:
-		result[dt] = {}
-		result[dt][req] = {}
-		result[dt][req][dt] = {"success": succ, "total": tot,}
-		compare = [dt]
-
-print (result.items())
-
-# for k in list(result.items()):
-# 	print (k[0], k[1])
+		result[compare[0]][req] = {"total": tot, "success": succ, "datetime": dt}
 
 
-# outputfile = open('my_log.log', 'w')
-# outputfile.truncate() # wipe the file
-# for line in newlist:
-# 	l = line['datetime']
-# 	l += " "
-# 	l += str(_interval)
-# 	l += " "
-# 	l += line['request']
-# 	l += " "
-# 	l += line['status']
-# 	l += "\n"
-# 	# outputfile.write(l)
-# print (l)
-# outputfile.close()
+#build report
+def complex_search(x):
+	return (x[1]['datetime'], x[0].replace("_", ""))
+
+result = sorted(result.items(), key=itemgetter(0))
+for k,v in result:
+	values = sorted(v.items(), key=lambda x: complex_search(x))
+	# print(values)
+	# print ("######################################################")
+	for req, vv in values:
+		print (vv['datetime'], _interval, req, "%.2f" % float(vv['success']/vv['total']*100))
